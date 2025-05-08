@@ -1,24 +1,3 @@
-
-    // const [searchParams, setSearchParams] = useSearchParams()
-
-    // const handleFilter = (value, sectionId) => {
-    //     const newSearchParams = new URLSearchParams(location.search)
-    //     let filterValues = newSearchParams.getAll(sectionId)
-
-    //     if (filterValues.includes(value)) {
-    //         filterValues = filterValues.filter((item) => item !== value)
-    //         if (filterValues.length === 0) {
-    //             newSearchParams.delete(sectionId)
-    //         } else {
-    //             newSearchParams.set(sectionId, filterValues.join(','))
-    //         }
-    //     } else {
-    //         filterValues.push(value)
-    //         newSearchParams.set(sectionId, filterValues.join(','))
-    //     }
-
-    //     setSearchParams(newSearchParams)
-    // }
 'use client'
 
 import { useState } from 'react'
@@ -98,6 +77,27 @@ function classNames(...classes) {
 export default function Product() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
+    // const [searchParams, setSearchParams] = useSearchParams()
+
+    // const handleFilter = (value, sectionId) => {
+    //     const newSearchParams = new URLSearchParams(location.search)
+    //     let filterValues = newSearchParams.getAll(sectionId)
+
+    //     if (filterValues.includes(value)) {
+    //         filterValues = filterValues.filter((item) => item !== value)
+    //         if (filterValues.length === 0) {
+    //             newSearchParams.delete(sectionId)
+    //         } else {
+    //             newSearchParams.set(sectionId, filterValues.join(','))
+    //         }
+    //     } else {
+    //         filterValues.push(value)
+    //         newSearchParams.set(sectionId, filterValues.join(','))
+    //     }
+
+    //     setSearchParams(newSearchParams)
+    // }
+    
     return (
         <div className="bg-white">
             <div>
