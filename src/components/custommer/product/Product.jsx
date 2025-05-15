@@ -15,8 +15,8 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { shoes } from '../../data/shoes'
-import ProductCard from '../../pages/product/ProductCard'
+import { shoes } from '../../../data/shoes'
+import ProductCard from './ProductCard'
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -97,7 +97,7 @@ export default function Product() {
 
     //     setSearchParams(newSearchParams)
     // }
-    
+
     return (
         <div className="bg-white">
             <div>
