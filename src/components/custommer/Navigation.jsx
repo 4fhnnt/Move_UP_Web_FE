@@ -375,6 +375,7 @@ export default function Navigation() {
                     <span className="ml-2 text-sm font-medium text-gray-400 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
+
                 </div>
 
                 {/* Account */}
@@ -392,7 +393,9 @@ export default function Navigation() {
                       <div className="p-3">
                         <div className="flex items-center justify-end">
                           {/* <p className="text-sm font-medium text-gray-900">Tài Khoản Của Tôi</p> */}
-                          <button className="text-gray-400 hover:text-gray-500 ">
+                          <button
+                            type="button"
+                            className="text-gray-400 hover:text-gray-500">
                             <XMarkIcon className="size-5" />
                           </button>
                         </div>
