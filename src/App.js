@@ -1,22 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/custommer/Navigation';
-import HomePage from './pages/home/HomePage';
 import Footer from './components/custommer/Footer';
-// import Product from './pages/product/Product';
-import ProductDetail from './pages/product/ProductDetail';
-
-
+import Cart from './components/custommer/Cart';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Navigation />
-      <div>
-        {/* <HomePage/> */}
-        {/* <Product /> */}
-        <ProductDetail />
-      </div>
+      <Cart />
       <Footer />
     </div>
   );

@@ -15,8 +15,9 @@ import {
   TabPanel,
   TabPanels,
 } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon, UserCircleIcon } from '@heroicons/react/24/outline'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CartS from './CartS';
 const navigation = {
   categories: [
     {
@@ -218,17 +219,17 @@ export default function Navigation() {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                  Sign in
+                  Đăng nhập
                 </a>
               </div>
               <div className="flow-root">
                 <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                  Create account
+                  Đăng ký
                 </a>
               </div>
             </div>
 
-            <div className="border-t border-gray-200 px-4 py-6">
+            {/* <div className="border-t border-gray-200 px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">
                 <img
                   alt=""
@@ -238,7 +239,7 @@ export default function Navigation() {
                 <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
                 <span className="sr-only">, change currency</span>
               </a>
-            </div>
+            </div> */}
           </DialogPanel>
         </div>
       </Dialog>
@@ -355,27 +356,6 @@ export default function Navigation() {
               </PopoverGroup>
 
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
-                  </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign up
-                  </a>
-                </div>
-
-                {/* <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                    <img
-                      alt=""
-                      src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg"
-                      className="block h-auto w-5 shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div> */}
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
@@ -387,14 +367,91 @@ export default function Navigation() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
+                  {/* <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       aria-hidden="true"
                       className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
                     />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </a> */}
+                  <Popover className="relative">
+                    <PopoverButton className="flex items-center ">
+                      <ShoppingBagIcon className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500 focus:outline-none" />
+                      <span className="ml-2 text-sm font-medium text-gray-500 group-hover:text-gray-500">0</span>
+                    </PopoverButton>
+
+                    <PopoverPanel>
+                      <CartS />
+                    </PopoverPanel>
+
+                    {/* <PopoverPanel
+                      transition
+                      className="fixed top-0 right-0 w-96 origin-top-right rounded-md bg-white shadow-lg">
+                          <div className="">
+                           
+                          </div>
+                    </PopoverPanel> */}
+                  </Popover>
+                </div>
+
+                {/* Account */}
+                <div className="ml-4 lg:ml-6">
+                  <Popover className="relative">=
+                    <PopoverButton
+
+                      className="flex items-center text-gray-400 hover:text-gray-500 focus:outline-none">
+                      <UserCircleIcon className="size-6 shrink-0" />
+                    </PopoverButton>
+
+                    <PopoverPanel
+                      transition
+                      className="fixed top-0 right-0 ư-64 origin-top-right rounded-md shadow-lg ring-1 bg-white ring-black ring-opacity-5 transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+                      {/* className="absolute right-0 mt-2 w-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in" */}
+                      <div className="p-3">
+                        <div className="flex items-center justify-end">
+                          {/* <p className="text-sm font-medium text-gray-900">Tài Khoản Của Tôi</p> */}
+                          <button className="text-gray-400 hover:text-gray-500 ">
+                            <XMarkIcon className="size-5" />
+                          </button>
+                        </div>
+                        <div className="mt-2 space-y-2">
+                          <a
+                            href=""
+                            className="block rouded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Tài Khoản Của Tôi
+                          </a>
+
+                          <a
+                            href="#"
+                            className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Danh Sách Yêu Thích
+                          </a>
+                          <a
+                            href="#"
+                            className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Trà Hàng
+                          </a>
+                          <a
+                            href="#"
+                            className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Hỗ Trợ
+                          </a>
+
+                        </div>
+                        <button className="mt-4 w-full rounded-md bg-amber-700 px-4 py-2 text-sm font-medium text-white hover:bg-amber-800">
+                          ĐĂNG NHẬP
+                        </button>
+                        <p className="mt-2 text-center text-xs text-gray-500">
+                          Bạn chưa có tài khoản? <a href="#" className="text-amber-700 hover:underline">ĐĂNG KÝ TẠI ĐÂY.</a>
+                        </p>
+                      </div>
+                    </PopoverPanel>
+                  </Popover>
                 </div>
               </div>
             </div>
