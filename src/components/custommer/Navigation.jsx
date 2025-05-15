@@ -367,39 +367,21 @@ export default function Navigation() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  {/* <a href="#" className="group -m-2 flex items-center p-2">
+                  <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       aria-hidden="true"
                       className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
                     />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                    <span className="ml-2 text-sm font-medium text-gray-400 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a> */}
-                  <Popover className="relative">
-                    <PopoverButton className="flex items-center ">
-                      <ShoppingBagIcon className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500 focus:outline-none" />
-                      <span className="ml-2 text-sm font-medium text-gray-500 group-hover:text-gray-500">0</span>
-                    </PopoverButton>
+                  </a>
 
-                    <PopoverPanel>
-                      <CartS />
-                    </PopoverPanel>
-
-                    {/* <PopoverPanel
-                      transition
-                      className="fixed top-0 right-0 w-96 origin-top-right rounded-md bg-white shadow-lg">
-                          <div className="">
-                           
-                          </div>
-                    </PopoverPanel> */}
-                  </Popover>
                 </div>
 
                 {/* Account */}
                 <div className="ml-4 lg:ml-6">
-                  <Popover className="relative">=
+                  <Popover className="relative">
                     <PopoverButton
-
                       className="flex items-center text-gray-400 hover:text-gray-500 focus:outline-none">
                       <UserCircleIcon className="size-6 shrink-0" />
                     </PopoverButton>
@@ -411,7 +393,9 @@ export default function Navigation() {
                       <div className="p-3">
                         <div className="flex items-center justify-end">
                           {/* <p className="text-sm font-medium text-gray-900">Tài Khoản Của Tôi</p> */}
-                          <button className="text-gray-400 hover:text-gray-500 ">
+                          <button
+                            type="button"
+                            className="text-gray-400 hover:text-gray-500">
                             <XMarkIcon className="size-5" />
                           </button>
                         </div>
